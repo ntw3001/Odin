@@ -24,9 +24,13 @@ end
 puts "Speak, champion"
 sentence = gets.chomp
 sleep(0.5)
-puts "Select a number, chosen one"
-number = gets.chomp.to_i
-sleep(0.5)
-puts "I have prepared your missive"
-sleep(0.5)
-caesar_cipher(sentence, number)
+if sentence == "No! I must kill the demons!"
+  puts "No, John. You are the demons"
+else
+  puts "Select a number, chosen one"
+  number = gets.chomp.to_i
+  sleep(0.5)
+  puts "I have prepared your missive"
+  sleep(0.5)
+  caesar_cipher(sentence, number)
+end

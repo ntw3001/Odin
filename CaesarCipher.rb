@@ -1,10 +1,12 @@
 def caesar_cipher(string, shift)
   letters = string.split("")
+  enciphered = ""
+
   alphab = ("a".."z").to_a
   alphab_large = ("A".."Z").to_a
   alphab_rotated = alphab.rotate(-shift)
   alphab_large_rotated = alphab_large.rotate(-shift)
-  enciphered = ""
+
   letters.each do |letter|
     if alphab_rotated.include? letter
       i = alphab_rotated.index(letter)
